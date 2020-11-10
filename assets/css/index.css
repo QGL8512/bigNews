@@ -15,6 +15,7 @@ body {
 .container {
     height: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .container header {
@@ -45,6 +46,7 @@ body {
     top: 60px;
     left: 0;
     bottom: 0;
+    z-index: 998;
 }
 
 .container aside ul {
@@ -80,6 +82,31 @@ body {
 }
 
 .container main {
+    height: 100%;
     padding-left: 220px;
-    padding-top: 20px;
+    /* margin-bottom: 44px; */
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 44px;
+}
+
+footer span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 15px;
+    background-color: #eee;
+    text-align: center;
+}
+
+footer div {
+    height: 44px;
 }

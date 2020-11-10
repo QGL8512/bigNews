@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-09 09:12:24
- * @LastEditTime: 2020-11-10 16:10:30
+ * @LastEditTime: 2020-11-10 17:44:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \大事件\index.html
@@ -42,28 +42,33 @@
                     <span class="myavatar">Q</span>
                     <img src="//t.cn/RCzsdCq" class="layui-nav-img myself"><span class="welcome">欢迎&nbsp;&nbsp;qgl</span>
                 </li>
-                <li class="layui-nav-item layui-this"><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>首页</a></li>
+                <li class="layui-nav-item layui-this"><a href="./home/dashboard.html" target="main_iframe"><i class="layui-icon layui-icon-face-smile"></i>首页</a></li>
                 <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>文章管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>文章管理</a></dd>
-                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>文章列表</a></dd>
-                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>发表文章</a></dd>
+                        <dd><a href="./article/article_categroy.html" target="main_iframe"><i class="layui-icon layui-icon-face-smile"></i>文章管理</a></dd>
+                        <dd><a href="./article/article_list.html" target="main_iframe"><i class="layui-icon layui-icon-face-smile"></i>文章列表</a></dd>
+                        <dd><a href="./article/article_release.html" target="main_iframe"><i class="layui-icon layui-icon-face-smile"></i>发表文章</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>个人中心</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>基本资料</a></dd>
-                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>更换头像</a></dd>
-                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>重置密码</a></dd>
+                        <dd><a href="./user/user_info.html" target="main_iframe"><i class="layui-icon layui-icon-face-smile"></i>基本资料</a></dd>
+                        <dd><a href="./user/user_avatar.html" target="main_iframe"><i class="layui-icon layui-icon-face-smile"></i>更换头像</a></dd>
+                        <dd><a href="./user/user_pass.html" target="main_iframe"><i class="layui-icon layui-icon-face-smile"></i>重置密码</a></dd>
                     </dl>
                 </li>
             </ul>
         </aside>
         <main>
-            我是主内容
+            <!-- 内容主体区域 -->
+            <iframe src="./user/user_pass.html" name="main_iframe" width="100%" height="100%" frameborder="0"></iframe>
         </main>
+        <footer>
+            <span>© www.itheima.com - 黑马程序员</span>
+            <div></div>
+        </footer>
     </div>
     <script src="./assets/lib/jquery.js"></script>
     <script src="./assets/lib/layui/layui.all.js"></script>
