@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-09 09:12:24
- * @LastEditTime: 2020-11-09 18:19:50
+ * @LastEditTime: 2020-11-10 16:10:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \大事件\index.html
@@ -13,11 +13,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel='stylesheet' href="assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+
 </head>
 
-
 <body>
-    <h1>我是主页面</h1>
+    <div class="container">
+        <header>
+            <div class="logo"><img src="./assets/images/logo.png" alt=""></div>
+            <ul class="layui-nav">
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><span class="myavatar">Q</span><img src="//t.cn/RCzsdCq" class="layui-nav-img myself">个人中心</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">基本资料</a></dd>
+                        <dd><a href="javascript:;">更新头像</a></dd>
+                        <dd><a href="javascript:;">重置密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" id="exit"><i class="layui-icon layui-icon-face-smile layui-icon-logout"></i> 退出</a>
+                </li>
+            </ul>
+        </header>
+        <aside>
+            <ul class="layui-nav layui-nav-tree" lay-shrink='all'>
+                <li class="layui-nav-item myImg">
+                    <span class="myavatar">Q</span>
+                    <img src="//t.cn/RCzsdCq" class="layui-nav-img myself"><span class="welcome">欢迎&nbsp;&nbsp;qgl</span>
+                </li>
+                <li class="layui-nav-item layui-this"><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>首页</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>文章管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>文章管理</a></dd>
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>文章列表</a></dd>
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>发表文章</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>个人中心</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>基本资料</a></dd>
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>更换头像</a></dd>
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-face-smile"></i>重置密码</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </aside>
+        <main>
+            我是主内容
+        </main>
+    </div>
+    <script src="./assets/lib/jquery.js"></script>
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

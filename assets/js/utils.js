@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-09 18:02:10
- * @LastEditTime: 2020-11-09 18:18:53
+ * @LastEditTime: 2020-11-10 15:14:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bigNews\assets\js\utils.js
@@ -10,4 +10,9 @@
 
 $.ajaxPrefilter(function(options) {
     options.url = 'http://ajax.frontend.itheima.net' + options.url
+    if (options.url.includes('/my')) {
+        options.headers = {
+            Authorization: localStorage.getItem('token')
+        }
+    }
 })

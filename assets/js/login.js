@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-09 16:15:06
- * @LastEditTime: 2020-11-09 18:17:00
+ * @LastEditTime: 2020-11-10 15:07:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bigNews\assets\js\login.js
@@ -75,6 +75,7 @@ $(function() {
                 layer.msg(res.message)
                     // 4.5 如果成功则要跳转到index.html页面
                 if (res.status == 0) {
+                    localStorage.setItem('token', res.token)
                     location.href = './index.html'
                 }
             }

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #F2F3F5;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+.container header {
+    height: 60px;
+    background-color: #23262E;
+    position: relative;
+    z-index: 999;
+}
+
+.container header .logo {
+    margin-left: 20px;
+}
+
+.container header ul {
+    height: 60px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    background-color: #23262E;
+}
+
+.container header ul li:nth-child(2) a i {
+    margin-right: 5px;
+}
+
+.container aside {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+}
+
+.container aside ul {
+    height: 100%;
+}
+
+.container .myavatar {
+    display: inline-block;
+    line-height: 30px;
+    margin-right: 5px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #FFF;
+    background-color: pink;
+}
+
+.container .myself {
+    display: none;
+}
+
+.container aside ul li:first-child {
+    text-align: center;
+}
+
+.container aside ul li a {
+    padding: 0 20px;
+}
+
+.container aside ul li a i {
+    margin-right: 8px;
+}
+
+.container main {
+    padding-left: 220px;
+    padding-top: 20px;
+}
