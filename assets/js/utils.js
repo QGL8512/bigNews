@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-09 18:02:10
- * @LastEditTime: 2020-11-10 15:14:06
+ * @LastEditTime: 2020-11-11 15:41:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bigNews\assets\js\utils.js
@@ -15,4 +15,5 @@ $.ajaxPrefilter(function(options) {
             Authorization: localStorage.getItem('token')
         }
     }
+
 })

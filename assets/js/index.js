@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-09 20:45:00
- * @LastEditTime: 2020-11-10 16:09:21
+ * @LastEditTime: 2020-11-11 09:21:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bigNews\assets\js\index.js
@@ -26,9 +26,6 @@ $(function() {
                 } else {
                     $('.myavatar').hide().next().show().attr('src', res.data.user_pic)
                 }
-            } else {
-                layer.msg(res.message)
-                location.href = './login.html'
             }
 
         }
