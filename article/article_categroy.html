@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-10 16:17:34
- * @LastEditTime: 2020-11-10 21:43:28
+ * @LastEditTime: 2020-11-11 23:50:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bigNews\article\article_categroy.html
@@ -26,16 +26,61 @@
             <button type="button" class="layui-btn  layui-btn-normal addCategroy">添加分类</button>
         </div>
         <div class="layui-card-body">
-            <table id="demo" lay-filter="test"></table>
+            <table id="myTable" lay-filter="test"></table>
         </div>
     </div>
     <script src="../assets/lib/jquery.js"></script>
     <script src="../assets/lib/layui/layui.all.js"></script>
     <script src="../assets/js/utils.js"></script>
     <script type="text" id="titleTpl">
-        <button type="button" class="layui-btn layui-btn-sm layui-btn-normal">编辑</button>
-        <button type="button" class="layui-btn layui-btn-sm layui-btn-danger">删除</button>
+        <button type="button" class="layui-btn layui-btn-sm layui-btn-normal editBtn">编辑</button>
+        <button type="button" class="layui-btn layui-btn-sm layui-btn-danger delBtn">删除</button>
 
+    </script>
+    <script type="text" id="addCategroy">
+        <form class="layui-form myform" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required|pass" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类别名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="alias" required lay-verify="required|pass" placeholder="请输入别名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn edit_pass" lay-submit lay-filter="formDemo">确认添加</button>
+
+                </div>
+            </div>
+        </form>
+    </script>
+    <script type="text" id="editCategroy">
+        <form class="layui-form myEditForm" lay-filter="editCategroy" action="">
+            <input type="hidden" name="id">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required" placeholder="请输入修改的标题" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类别名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="alias" required lay-verify="required" placeholder="请输入修改的别名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">确认添加</button>
+                    <button class="layui-btn" lay-filter="formDemo">重置</button>
+                </div>
+            </div>
+        </form>
     </script>
     <script src="../assets/js/article_categroy.js"></script>
 </body>

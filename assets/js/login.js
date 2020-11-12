@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-09 16:15:06
- * @LastEditTime: 2020-11-11 15:34:53
+ * @LastEditTime: 2020-11-11 15:51:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bigNews\assets\js\login.js
@@ -65,8 +65,6 @@ $(function() {
         })
     })
     $('.login .myform').on('submit', function(e) {
-        console.log(11111);
-
         e.preventDefault()
         $.ajax({
             type: 'POST',

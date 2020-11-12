@@ -1,0 +1,44 @@
+    .layui-card-body {
+        width: 500px;
+    }
+    
+    .content .cropper-box {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+    }
+    
+    .imgBox {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .preview-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .preview-box .img-b {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    .preview-box .img_big {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 50px;
+        background-color: #000;
+    }
+    
+    .preview-box .img_small {
+        width: 50px;
+        height: 50px;
+        background-color: #F00;
+    }
+    
+    .btns {
+        padding: 20px 0;
+        display: flex;
+        justify-content: flex-end;
+    }
