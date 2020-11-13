@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-10 16:17:34
- * @LastEditTime: 2020-11-10 21:01:42
+ * @LastEditTime: 2020-11-13 17:23:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bigNews\article\article_categroy.html
@@ -12,12 +12,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/article_list.css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>我是文章列表</h1>
+    <div class="layui-card">
+        <div class="layui-card-header">文章列表</div>
+        <div class="layui-card-body">
+            <form class="layui-form myform" action="">
+                <div class="layui-inline">
+                    <div layui-input-inline>
+                        <select name="city" id="category" lay-verify="">
+                            <option value="010">北京</option>
+                            <option value="021" disabled>上海（禁用效果）</option>
+                            <option value="0571" selected>杭州</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div layui-input-inline>
+                        <select name="city" lay-verify="">
+                            <option value="">所有状态</option>
+                            <option value="0">已发布</option>
+                            <option value="1">草稿</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">筛选</button>
+                    </div>
+                </div>
+            </form>
+            <table id="myTable" lay-filter="myTable"></table>
+        </div>
+    </div>
+    <div id="view"></div>
+    <script type="text/html" id="myBtns">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+    <!-- <script type="text/html" id="options">
+        <option value="021" selected>所有分类</option>
+        {{ each data v i}}
+        <option value="{{v.Id}}">{{v.name}}</option>
+        {{ /each}}
+    </script> -->
+    <script id="options" type="text/html">
+        <option value="" selected>所有分类</option>
+        {{# layui.each(d.data, function(index, item){ }}
+        <option value="{{item.Id}}">{{item.name}}</option>
+        {{# }); }} {{# if(d.data.length === 0){ }} 无数据 {{# } }}
+    </script>
     <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/lib/template-web.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/article_list.js"></script>
     <script>
     </script>
 </body>
