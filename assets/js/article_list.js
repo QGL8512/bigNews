@@ -3,7 +3,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-12 17:57:55
- * @LastEditTime: 2020-11-14 15:05:26
+ * @LastEditTime: 2020-11-14 18:24:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bigNews\assets\js\article_list.js
@@ -74,9 +74,10 @@ $(function() {
     layui.table.on('tool(myTable)', function(res) {
         let data = res.data
         let layEvent = res.event
-        console.log(data)
         if (layEvent === 'edit') {
             layer.msg('还在写')
+            location.href = './article_edit.html?id=' + data.Id
+
         } else if (layEvent === 'del') {
             layer.confirm('是否删除该文章？', {
                 icon: 3,
