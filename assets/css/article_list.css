@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.layui-card {
+    margin: 18px 18px 0 0;
+}
+
 .myform .layui-inline {
     margin-right: 20px;
 }

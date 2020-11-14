@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-10 16:17:34
- * @LastEditTime: 2020-11-10 16:20:48
+ * @LastEditTime: 2020-11-14 17:10:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bigNews\article\article_categroy.html
@@ -12,11 +12,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/lib/cropper/cropper.css">
+    <link rel="stylesheet" href="../assets/css/article_release.css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>我是文章发布</h1>
+    <div class="layui-card">
+        <div class="layui-card-header">
+            发布文章
+        </div>
+        <div class="layui-card-body">
+            <form class="layui-form myform" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章类别</label>
+                    <div class="layui-input-block">
+                        <select name="cate_id" id="options" lay-verify="required">
+                           
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">文章内容</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">图片裁切</label>
+                    <div class="layui-input-block">
+                        <div class="box">
+                            <!-- 图片裁剪区域 -->
+                            <div class="cropper-box">
+                                <!-- 这个 img 标签很重要，将来会把它初始化为裁剪区域 -->
+                                <img id="image" src="/assets/images/sample.jpg" />
+                            </div>
+                            <!-- 图片的预览区域 -->
+                            <div class="preview-box">
+                                <div class="img-preview"></div>
+                                <div>
+                                    <input type="file" id="avatar" style="display: none;">
+                                    <button type="button" class="layui-btn layui-btn-danger btn-upload">选择封面</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item footer">
+                    <div class="layui-input-block">
+                        <!-- <button class="layui-btn btn btn-release" lay-submit lay-filter="formDemo">发布</button>
+                        <button class="layui-btn btn layui-btn-primary">存为草稿</button> -->
+                        <button class="layui-btn btn layui-btn-danger">草稿</button>
+                        <button class="layui-btn btn btn-release" lay-submit lay-filter="formDemo">发布</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script type="text/html" id="myTemp">
+        <option value="" selected></option>
+        {{# layui.each(d.data, function(index, item){ }}
+        <option value="{{item.Id}}">{{item.name}}</option>
+        {{# }); }} {{# if(d.data.length === 0){ }} 无数据 {{# } }}
+    </script>
+    <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/lib/cropper/Cropper.js"></script>
+    <script src="../assets/lib/cropper/jquery-cropper.js"></script>
+    <script src="../assets/lib/tinymce/tinymce.min.js"></script>
+    <script src="../assets/lib/tinymce/tinymce_setup.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/article_release.js"></script>
 </body>
 
 </html>

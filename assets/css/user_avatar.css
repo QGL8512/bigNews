@@ -2,6 +2,10 @@
         width: 500px;
     }
     
+    .layui-card {
+        margin: 0 18px 0 0;
+    }
+    
     .content .cropper-box {
         width: 350px;
         height: 350px;
